@@ -1,0 +1,31 @@
+// 背景图片
+bg-image($url)
+  background-image: url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url($url + "@3x.png")
+
+// 不换行
+no-wrap()
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+// 扩展点击区域
+extend-click()
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -10px
+    left: -10px
+    right: -10px
+    bottom: -10px
+@font-face {
+  font-family: 'iconfont';  /* project id 845464 */
+  src: url('//at.alicdn.com/t/font_845464_6ruiik2zw37.eot');
+  src: url('//at.alicdn.com/t/font_845464_6ruiik2zw37.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_845464_6ruiik2zw37.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_845464_6ruiik2zw37.woff') format('woff'),
+  url('//at.alicdn.com/t/font_845464_6ruiik2zw37.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_845464_6ruiik2zw37.svg#iconfont') format('svg');
+}
